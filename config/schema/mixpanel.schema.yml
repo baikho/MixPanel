@@ -1,0 +1,12 @@
+# Schema for the configuration files of the mixpanel module.
+
+mixpanel.settings:
+  type: mapping
+  label: 'Mixpanel settings'
+  mapping:
+    mixpanel_token:
+      type: string
+      label: 'Mixpanel token'
+    mixpanel_user:
+      type: boolean
+      label: 'Mixpanel User integration'

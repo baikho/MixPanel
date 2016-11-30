@@ -1,0 +1,15 @@
+<?php
+
+/**
+ * Implements hook_entity_type_build().
+ */
+function mixpanel_entity_type_build(array &$entity_types) {
+  $config = \Drupal::config('mixpanel.settings');
+  if ($config->get('mixpanel_user', TRUE)) {
+    /** @var $entity_types \Drupal\Core\Entity\EntityTypeInterface[] */
+    $entity_types['user']
+      ->setFormClass('register', 'Drupal\mixpanel\MixPanelRegisterForm')
+      ->setFormClass('cancel', 'Drupal\mixpanel\MixPanelUserCancelForm')
+      ->setFormClass('default', 'Drupal\mixpanel\MixPanelProfileForm');
+  }
+}

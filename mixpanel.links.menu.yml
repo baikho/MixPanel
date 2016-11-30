@@ -1,0 +1,5 @@
+mixpanel.settings:
+  title: Mixpanel settings
+  route_name: mixpanel.settings
+  parent: system.admin_config
+  description: 'Set Mixpanel token and change other internal settings for Mixpanel integration.'

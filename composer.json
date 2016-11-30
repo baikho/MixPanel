@@ -1,0 +1,11 @@
+{
+  "name": "drupal/mixpanel",
+  "description": "This library provides an API to track events and update profiles on Mixpanel.",
+  "type": "drupal-module",
+  "config": {
+    "secure-http": false
+  },
+  "require": {
+    "mixpanel/mixpanel-php" : "2.*"
+  }
+}

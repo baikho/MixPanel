@@ -1,0 +1,4 @@
+services:
+  mixpanel.tracker:
+    class: Drupal\mixpanel\MixPanelTracker
+    arguments: ['@config.factory', '@current_user', '@request_stack']
