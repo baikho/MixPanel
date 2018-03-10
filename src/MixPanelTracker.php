@@ -72,8 +72,8 @@ class MixPanelTracker implements MixPanelTrackerInterface {
       '$browser' => $this->getBrowser(),
       '$os' => $this->getOs(),
       '$device' => $this->getDevice(),
-      '$referrer' => $_SERVER['HTTP_REFERER'],
-      '$referring_domain' => parse_url($_SERVER['HTTP_REFERER'], PHP_URL_HOST),
+      '$referrer' => isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : '',
+      '$referring_domain' => isset($_SERVER['HTTP_REFERER']) ? parse_url($_SERVER['HTTP_REFERER'], PHP_URL_HOST) : '',
     );
     $this->mixpanel->track($event, $properties);
     return $this;
